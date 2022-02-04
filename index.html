@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8"/>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
+  <script
+      type="text/javascript"
+      src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"
+  ></script>
+  <title>vite-aframe-demo</title>
+</head>
+<body>
+<a-scene
+    embedded=""
+    renderer="colorManagement: true"
+    vr-mode-ui="enabled: false"
+    arjs="trackingMethod: best; sourceType: webcam; matrixCodeType: 3x3;detectionMode:mono_and_matrix; debugUIEnabled: false;"
+>
+  <a-camera
+      gps-camera="maxDistance:30"
+      cursor="rayOrigin: mouse; fuse:false"
+      camera=""
+  >
+  </a-camera>
+</a-scene>
+<img src="./Poweredby-giphy.png" alt="powered by giphy" width="641" height="85" loading="lazy" class="powered-by-giphy">
+<script type="module" src="/src/main.ts"></script>
+</body>
+</html>
