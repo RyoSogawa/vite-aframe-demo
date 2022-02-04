@@ -19,15 +19,15 @@ export const createPlace = (place: Place) => {
   scene.appendChild(text)
 
   const cone = document.createElement('a-cone')
-  cone.setAttribute('width', 0.5)
-  cone.setAttribute('height', 2)
+  cone.setAttribute('width', '0.5')
+  cone.setAttribute('height', '2')
   cone.setAttribute('color', place.icon_background_color)
   cone.setAttributeNode(createGps())
   scene.appendChild(cone)
 
   const plane = document.createElement('a-plane')
-  plane.setAttribute('width', 8)
-  plane.setAttribute('height', 6)
+  plane.setAttribute('width', '8')
+  plane.setAttribute('height', '6')
   plane.setAttribute('color', 'white')
   plane.setAttribute('look-at', '[gps-camera]')
   plane.setAttribute('position', '0 4 2')
@@ -41,11 +41,11 @@ export const createPlace = (place: Place) => {
   const loadingText = document.createElement('a-text')
   loadingText.setAttribute('value', 'Loading...')
   loadingText.setAttribute('color', 'black')
-  loadingText.setAttribute('width', 18)
+  loadingText.setAttribute('width', '18')
   loadingText.setAttribute('position', '0 4 0')
   loadingText.setAttribute('align', 'center')
   loadingText.setAttribute('look-at', '[gps-camera]')
-  loadingText.setAttribute('z-offset', 1)
+  loadingText.setAttribute('z-offset', '1')
   loadingText.setAttributeNode(createGps())
   scene.appendChild(loadingText)
 
@@ -57,8 +57,11 @@ export const createPlace = (place: Place) => {
 
       const gif = document.createElement('a-image')
       gif.setAttribute('src', data.mp4)
-      gif.setAttribute('width', 8)
-      gif.setAttribute('height', (Number(data.height) * 8) / Number(data.width))
+      gif.setAttribute('width', '8')
+      gif.setAttribute(
+        'height',
+        String((Number(data.height) * 8) / Number(data.width))
+      )
       gif.setAttribute('look-at', '[gps-camera]')
       gif.setAttribute('position', '0 4 2')
       gif.setAttributeNode(createGps())
