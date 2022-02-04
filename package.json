@@ -9,13 +9,11 @@
   },
   "dependencies": {
     "@googlemaps/google-maps-services-js": "^3.3.6",
-    "aframe": "^1.2.0",
     "axios": "^0.25.0",
     "express": "^4.17.2",
     "giphy-api": "^2.0.2"
   },
   "devDependencies": {
-    "@types/aframe": "^1.0.5",
     "@types/express": "^4.17.13",
     "@types/giphy-api": "^2.0.3",
     "@typescript-eslint/eslint-plugin": "^5.10.0",
